@@ -1,7 +1,3 @@
-var storeNameTeam = "favorite_team";
-var storeNameMatch = "favorite_match";
-var storeNamePlayer = "favorite_player";
-
 function cekDatabase(idb) {
     var dbPromised = idb.open("premier-league", 1, function(upgradeDb) {    
         if (!upgradeDb.objectStoreNames.contains(storeNameTeam)) {
@@ -59,7 +55,7 @@ function addToFavorite(data, storeName) {
             var tx = db.transaction(storeName, "readwrite");
             var store = tx.objectStore(storeName);
             
-            store.add(data, dataPrimaryKey);
+            store.put(data, dataPrimaryKey);
 
             return tx.complete;
         })

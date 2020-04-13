@@ -1,19 +1,19 @@
-var base_url = "https://api.football-data.org/v2";
-var api_token = "d6d7c05a129a4462a835cc8a0cd29885";
-var id_liga = 2021;
+const base_url = "https://api.football-data.org/v2";
+const api_token = "d6d7c05a129a4462a835cc8a0cd29885";
+const id_liga = 2021;
 
-var endpoint_standings = `${base_url}/competitions/${id_liga}/standings?standingType=TOTAL`;
-var endpoint_matches = `${base_url}/competitions/${id_liga}/matches?status=SCHEDULED`;
-var endpoint_detail_team = `${base_url}/teams/`;
-var endpoint_detail_match = `${base_url}/matches/`;
-var endpoint_detail_player = `${base_url}/players/`;
+const endpoint_standings = `${base_url}/competitions/${id_liga}/standings?standingType=TOTAL`;
+const endpoint_matches = `${base_url}/competitions/${id_liga}/matches?status=SCHEDULED`;
+const endpoint_detail_team = `${base_url}/teams/`;
+const endpoint_detail_match = `${base_url}/matches/`;
+const endpoint_detail_player = `${base_url}/players/`;
 
-var typeTeam = "team";
-var typeMatch = "match";
-var typePlayer = "player";
-var storeNameTeam = "favorite_team";
-var storeNameMatch = "favorite_match";
-var storeNamePlayer = "favorite_player";
+const typeTeam = "team";
+const typeMatch = "match";
+const typePlayer = "player";
+const storeNameTeam = "favorite_team";
+const storeNameMatch = "favorite_match";
+const storeNamePlayer = "favorite_player";
 
 function status(response) {
     if (response.status !== 200) {
