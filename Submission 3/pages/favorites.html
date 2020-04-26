@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col s12 m12 l12">
+        <div class="card">
+            <div class="card-content">
+                <form action="#" id="form-favorites">
+                    <h6>Filter favorites: </h6>
+                    <p>
+                        <label>
+                            <input onchange="filterFavorites('favorite_team')" class="with-gap" name="favorite-radio" type="radio" checked/>
+                            <span>Team</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input onchange="filterFavorites('favorite_match')" class="with-gap" name="favorite-radio" type="radio" />
+                            <span>Match</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input onchange="filterFavorites('favorite_player')" class="with-gap" name="favorite-radio" type="radio" />
+                            <span>Player</span>
+                        </label>
+                    </p>
+                </form>
+            </div>
+        </div>
+
+        <div class="card" id="favorite-item"> 
+            <div class="card-content">
+
+            </div>
+        </div>
+    </div>
+</div>
