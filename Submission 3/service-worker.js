@@ -19,7 +19,10 @@ workbox.precaching.precacheAndRoute([
     { url: "/js/my-script.js", revision: "1"},
     { url: "/js/nav.js", revision: "1"},
     { url: "/js/views.js", revision: "1"},
-]);
+], {
+    // Ignore all URL parameters.
+    ignoreUrlParametersMatching: [/.*/]
+});
 
 workbox.routing.registerRoute(
     /\.(?:png|gif|jpg|jpeg|svg)$/,
