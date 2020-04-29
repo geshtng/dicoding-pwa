@@ -1,12 +1,12 @@
-var dbPromised = idb.open("bundesliga-idb", 1, upgradeDB => {
-     var teamsObjectStore = upgradeDB.createObjectStore(store_name_team, {keyPath: "id"});
+const dbPromised = idb.open("bundesliga-idb", 1, upgradeDB => {
+     const teamsObjectStore = upgradeDB.createObjectStore(store_name_team, {keyPath: "id"});
      teamsObjectStore.createIndex("team_name", "name", {unique: false});
 
-     var matchObjectStore = upgradeDB.createObjectStore(store_name_match, {keyPath: "id"});
+     const matchObjectStore = upgradeDB.createObjectStore(store_name_match, {keyPath: "id"});
      matchObjectStore.createIndex("home_team", "homeTeam.name", {unique: false});
      matchObjectStore.createIndex("away_team", "awayTeam.name", {unique: false});
 
-     var playerObjectStore = upgradeDB.createObjectStore(store_name_player, {keyPath: "id"});
+     const playerObjectStore = upgradeDB.createObjectStore(store_name_player, {keyPath: "id"});
      playerObjectStore.createIndex("player_name", "name", {unique: false});
 });
 
